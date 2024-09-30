@@ -12,7 +12,7 @@ Pr. LACHGAR
 
 ## Table des matières
 1. [Introduction](#introduction)
-2. [Partie 1 : Projet NetBeans `demojdbc`](#partie-1--projet-netbeans-demojdbc)
+2. [Partie 1 : Projet NetBeans `demo`](#partie-1--projet-netbeans-demo)
 3. [Partie 2 : Création de la table Site](#partie-2--création-de-la-table-site)
 4. [Partie 3 : Insertion des données](#partie-3--insertion-des-données)
 5. [Partie 4 : Récupération des données](#partie-4--récupération-des-données)
@@ -23,13 +23,13 @@ Pr. LACHGAR
 
 Dans ce TP, nous allons créer un projet Java avec NetBeans, insérer et récupérer des données dans une base de données MySQL. Nous allons également créer des méthodes Java pour interagir avec la base de données.
 
-## Partie 1 : Projet NetBeans `demojdbc`
+## Partie 1 : Projet NetBeans `demo`
 
 ### Création du projet
 1. Ouvrez NetBeans.
 2. Cliquez sur **Menu** > **File** > **New Project**.
 3. Sélectionnez **Java** puis **Java Application** et cliquez sur **Next**.
-4. Entrez le nom du projet : `demojdbc`.
+4. Entrez le nom du projet : `demo`.
 
 
 ![image](https://github.com/user-attachments/assets/4384263d-b4ed-4e42-9b33-b18cfae0fe75)
