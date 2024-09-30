@@ -1,6 +1,3 @@
-Voici un fichier README adapté pour votre TP avec des espaces pour les captures d’écran.
-
----
 
 # TP1 : Insertion et récupération des données
 
@@ -34,10 +31,8 @@ Dans ce TP, nous allons créer un projet Java avec NetBeans, insérer et récup�
 3. Sélectionnez **Java** puis **Java Application** et cliquez sur **Next**.
 4. Entrez le nom du projet : `demojdbc`.
 
-_**Capture d'écran :**_
-```
-[Capture d'écran de la fenêtre "New Project"]
-```
+
+![image](https://github.com/user-attachments/assets/4384263d-b4ed-4e42-9b33-b18cfae0fe75)
 
 5. Cliquez sur **Finish** pour créer le projet.
 
@@ -45,105 +40,61 @@ _**Capture d'écran :**_
 1. Cliquez avec le bouton droit sur le projet et sélectionnez **Properties**.
 2. Dans l'onglet **Libraries**, cliquez sur **Add Library** et ajoutez le driver MySQL.
 
-_**Capture d'écran :**_
-```
-[Capture d'écran de l'ajout du driver MySQL]
-```
+
+![image](https://github.com/user-attachments/assets/b898ca26-21cb-44eb-a814-7a31f9c63fb5)
+
+
 
 ## Partie 2 : Création de la table Site
 
 1. Ouvrez votre console MySQL et connectez-vous à la base de données `db`.
 2. Créez la table `Site` avec la commande suivante :
 
-```sql
-CREATE TABLE Site (
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  name VARCHAR(100),
-  location VARCHAR(100)
-);
-```
+![image](https://github.com/user-attachments/assets/0bd16d4f-710e-46ee-aa00-04d5759e2a7f)
 
-_**Capture d'écran :**_
-```
-[Capture d'écran de la création de la table Site dans MySQL]
-```
+
+![image](https://github.com/user-attachments/assets/deef2d88-cccd-48a5-bcd9-49120c882263)
+
 
 ## Partie 3 : Insertion des données
 
 1. Dans NetBeans, créez une classe `Site` dans le package `beans` pour représenter un site avec ses attributs.
 2. Créez la méthode `save(Site site)` dans une classe `Test` pour insérer des données dans la table `Site`.
 
-_**Capture d'écran :**_
-```
-[Capture d'écran de la classe Site et méthode save()]
-```
+![image](https://github.com/user-attachments/assets/4c186b00-67fd-4a76-bfed-f9e4c0d77538)
 
-### Exemple de code pour la méthode `save` :
+![image](https://github.com/user-attachments/assets/a29edc41-40e8-4913-a6be-303685b697fd)
 
-```java
-public void save(Site site) {
-    Connection conn = getConnection();
-    String query = "INSERT INTO Site (name, location) VALUES (?, ?)";
-    try (PreparedStatement stmt = conn.prepareStatement(query)) {
-        stmt.setString(1, site.getName());
-        stmt.setString(2, site.getLocation());
-        stmt.executeUpdate();
-    } catch (SQLException e) {
-        e.printStackTrace();
-    }
-}
-```
+
+
 
 3. Testez la méthode `save()` dans la méthode `main` :
 
-_**Capture d'écran :**_
-```
-[Capture d'écran des résultats de l'insertion des données]
-```
+![image](https://github.com/user-attachments/assets/eed105e4-0e28-45d9-9003-fb5d02981cd7)
+
+![image](https://github.com/user-attachments/assets/8ff55b90-1a13-4a97-b9a8-3e49dd22eeb8)
+
+
 
 ## Partie 4 : Récupération des données
 
 1. Ajoutez une méthode `load()` dans la classe `Test` pour récupérer les sites enregistrés dans la base de données.
 
-_**Capture d'écran :**_
-```
-[Capture d'écran de la méthode load()]
-```
+![image](https://github.com/user-attachments/assets/b86b8b6e-5218-4444-8349-0af80289c664)
 
-### Exemple de code pour la méthode `load` :
 
-```java
-public List<Site> load() {
-    List<Site> sites = new ArrayList<>();
-    Connection conn = getConnection();
-    String query = "SELECT * FROM Site";
-    try (Statement stmt = conn.createStatement()) {
-        ResultSet rs = stmt.executeQuery(query);
-        while (rs.next()) {
-            Site site = new Site(rs.getInt("id"), rs.getString("name"), rs.getString("location"));
-            sites.add(site);
-        }
-    } catch (SQLException e) {
-        e.printStackTrace();
-    }
-    return sites;
-}
-```
 
 2. Testez la méthode `load()` dans la méthode `main` :
 
-_**Capture d'écran :**_
-```
-[Capture d'écran des résultats de la récupération des données]
-```
+![image](https://github.com/user-attachments/assets/34c83003-a48e-4a46-bd1e-2be09b59dc61)
 
----
+![image](https://github.com/user-attachments/assets/1f25ef7f-a886-4c2d-ad67-29aac53ca768)
+
+
 
 ### Conclusion
 
-Ce TP vous a permis de comprendre comment créer un projet Java avec NetBeans, connecter ce projet à une base de données MySQL, insérer des données, et les récupérer via des méthodes Java.
+Ce TP m'a permis de comprendre comment créer un projet Java avec NetBeans, connecter ce projet à une base de données MySQL, insérer des données, et les récupérer via des méthodes Java.
 
 ---
-
-Ajoutez vos captures d’écran au fur et à mesure pour documenter le processus dans ce fichier README.
 
